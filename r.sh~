@@ -3,8 +3,7 @@ git add *
 git commit -m "Update README.md"
 # git push | printf 'minseokkim@kaist.ac.kr/nKIki2891!!'
 #git push << minseokkim@kaist.ac.kr
-git push
-expect "Username for 'https://github.com':"
+git push | expect "Username for 'https://github.com':"
 send "minseokkim@kaist.ac.kr\r"
 expect "Password:"
 send "password\r"
